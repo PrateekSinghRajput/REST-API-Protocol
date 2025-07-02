@@ -6,3 +6,8 @@ pip install Flask
 pip install mysql-connector-python
 python server.py
 python3 -m venv venv
+
+
+
+brew install watch
+watch -n 2 "mysql -u root -p'1997' -h localhost iot_db -e 'SELECT * FROM sensor_data ORDER BY timestamp DESC LIMIT 5;'"
